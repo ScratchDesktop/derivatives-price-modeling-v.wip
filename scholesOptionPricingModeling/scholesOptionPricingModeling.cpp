@@ -367,9 +367,8 @@ private:
 
 int main() {
 
-    Option AFRM = Option(19, 9, 0.14, "Put", 0.15, "AFRM", 25, 25.98, 0.9434);
-    hold_Derivatives Derivatives = hold_Derivatives(AFRM);
-    Derivatives.shareDerivativeInfo();
+    Option AFRM = Option(19, 9, 0.14, "Put", 0.15, "AFRM", 25, 25.98, 0.9434); // Creating Option Position For Affirm Holdings, Inc. (AFRM)
+    map<string, vector<double>> AFRM_notables = AFRM.findNotables(); // Applies Merton Formula To Put Option, The result is Stored in a Map
 
     return 0;
 }
